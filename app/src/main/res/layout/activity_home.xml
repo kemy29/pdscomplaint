@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome, \tKofi Electric"
+        android:layout_marginEnd="15dp"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/welcomeText"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/home_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg"
+        android:elevation="5dp"
+        android:layout_below="@id/welcomeText">
+
+        <TextView
+            android:id="@+id/abv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E\nC\nG "
+            android:textSize="40dp"
+            android:layout_marginTop="45dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lectricity"
+            android:textSize="32sp"
+            android:layout_marginTop="52dp"
+            android:layout_toEndOf="@id/abv"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ompany of"
+            android:textSize="32sp"
+            android:layout_marginTop="102dp"
+            android:layout_toEndOf="@id/abv"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hana"
+            android:textSize="32sp"
+            android:layout_marginTop="148dp"
+            android:layout_toEndOf="@id/abv"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How can we help you today?"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="22dp"
+            android:textStyle="italic"/>
+
+        <RelativeLayout
+            android:layout_width="105dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:background="@color/colorPrimary">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/home_image"
+        android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="15dp">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/meter_mgt"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="5dp"
+        android:elevation="5dp"
+        android:onClick="onClick"
+        android:background="?android:attr/selectableItemBackground">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_mgt"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:padding="10dp"
+            android:id="@+id/meter_image"
+            android:background="@drawable/menu_bg"/>
+
+        <TextView
+            android:id="@+id/meter_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meter Management"
+            android:textAlignment="center"
+            android:layout_below="@id/meter_image"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/find_office_complainants"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="5dp"
+        android:padding="5dp"
+        android:onClick="onClick"
+        android:background="?android:attr/selectableItemBackground"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_loca"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/menu_bg"
+            android:id="@+id/payment_image"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/payment_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Office\n Locations"
+            android:textAlignment="center"
+            android:layout_below="@id/payment_image"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/faq"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="5dp"
+        android:padding="5dp"
+        android:onClick="onClick"
+        android:background="?android:attr/selectableItemBackground">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/note_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_faq"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/menu_bg"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/note_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FAQ \n"
+            android:textAlignment="center"
+            android:layout_below="@id/note_image"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/User_settings"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="5dp"
+                android:padding="5dp"
+                android:onClick="onClick"
+                android:background="?android:attr/selectableItemBackground">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/ic_settings"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:padding="10dp"
+                    android:id="@+id/User_settings_image"
+                    android:background="@drawable/menu_bg"/>
+
+                <TextView
+                    android:id="@+id/User_settings_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="User \nSettings"
+                    android:textAlignment="center"
+                    android:layout_below="@id/User_settings_image"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/Report"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="5dp"
+                android:padding="5dp"
+                android:onClick="onClick"
+                android:background="?android:attr/selectableItemBackground">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/ic_report"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/menu_bg"
+                    android:id="@+id/Report_image"
+                    android:padding="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/Report_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Report \nIssue"
+                    android:textAlignment="center"
+                    android:layout_below="@id/Report_image"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/contact"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:onClick="onClick"
+                android:background="?android:attr/selectableItemBackground"
+                android:elevation="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/contact_image"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/ic_contact"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/menu_bg"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:id="@+id/contact_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us\n"
+                    android:textAlignment="center"
+                    android:layout_below="@id/contact_image"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/register_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/register_header"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/names">
+
+            <EditText
+                android:id="@+id/edt_register_fname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:hint="First name"
+                android:textSize="16sp"
+                android:nextFocusDown="@id/edt_register_lname"
+                android:inputType="textPersonName"/>
+            <EditText
+                android:id="@+id/edt_register_lname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:hint="Last name"
+                android:textSize="16sp"
+                android:nextFocusDown="@id/edt_register_email"
+                android:inputType="textPersonName"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/names"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:hint="And your email"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:nextFocusDown="@id/edt_register_password"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/gender"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/edt_register_email"
+            android:gravity="center">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="16sp"
+                android:layout_marginEnd="100dp"
+                android:id="@+id/male_radio"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="16sp"
+                android:id="@+id/female_radio"/>
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edt_register_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:hint="Create a password!"
+            android:textSize="16sp"
+            android:inputType="textPassword"
+            android:layout_below="@id/gender"
+            android:nextFocusDown="@id/edt_register_phone"/>
+
+        <EditText
+            android:id="@+id/edt_register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:hint="Your phone number"
+            android:textSize="16sp"
+            android:inputType="phone"
+            android:layout_below="@id/edt_register_password"
+            android:nextFocusDown="@id/edt_register_house_no"/>
+
+
+        <EditText
+            android:id="@+id/edt_register_house_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:hint="Your house number"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:layout_below="@id/edt_register_phone"
+            android:nextFocusDown="@id/edt_register_meter_no"/>
+
+        <EditText
+            android:id="@+id/edt_register_meter_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:hint="Your meter number"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:layout_below="@id/edt_register_house_no"
+            android:nextFocusDown="@id/btn_register"/>
+
+        <TextView
+            android:id="@+id/edt_register_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textSize="14sp"
+            android:text="@string/terms_string"
+            android:layout_below="@id/edt_register_meter_no"/>
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SignUp"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/loginbtn_bg"
+            android:layout_below="@id/edt_register_terms"/>
+
+        <TextView
+            android:id="@+id/existing_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already a user? Login here"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_register"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="15dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

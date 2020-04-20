@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contact">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:id="@+id/contact_logo"/>
+
+
+    <TextView
+        android:id="@+id/contact_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/white_bg"
+        android:text="PDS Complaint Mobile App"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:elevation="3dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/contact_logo"/>
+
+
+    <TextView
+        android:id="@+id/contact_developer_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/white_bg"
+        android:text="Developed and Deigned By:\nEmmanuel Fynn - Valley View University"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimary"
+        android:elevation="3dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/contact_app_name"/>
+
+
+    <LinearLayout
+        android:id="@+id/about_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg"
+        android:elevation="3dp"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/contact_developer_name"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#1 Application for Electricity Company of Ghana"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/about_app"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg"
+        android:elevation="3dp"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/about_app"
+        android:padding="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us:\n0302 760 3693\nwww.ecgonline.info"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@android:drawable/stat_sys_phone_call"
+        android:id="@+id/call_office"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="50dp"/>
+
+</RelativeLayout>

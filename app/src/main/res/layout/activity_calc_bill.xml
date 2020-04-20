@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalcBill">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/img"
+        android:scaleType="centerCrop"
+        android:background="@android:color/white"
+        android:paddingStart="45dp"
+        android:paddingEnd="45dp"
+        android:src="@color/colorPrimary"
+        android:layout_alignParentTop="true"/>
+    <TextView
+        android:id="@+id/hint_ocr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Image will appear here"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:textSize="18dp"
+        android:fontFamily="sans-serif-thin"/>
+
+
+
+    <ImageButton
+        android:id="@+id/retake"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="310dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/retake"
+        android:scaleType="centerCrop"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:onClick="onClick"
+        android:outlineProvider="bounds"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/header_meter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Meter Reading"
+        android:layout_below="@id/img"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/ocr_current_reading"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/header_meter"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:text="Current reading"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="18sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/ocr_current_reading_value"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/header_meter"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="12,546"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="18sp" />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_below="@id/ocr_current_reading_value"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:background="@color/colorPrimary"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/ocr_consumption"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/ocr_current_reading"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Consumption"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="18sp" />-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_below="@id/ocr_consumption_value"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:background="@color/colorPrimary"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/ocr_consumption_value"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/ocr_current_reading_value"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="23"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="18sp" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/ocr_multiplier"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/ocr_consumption"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Multiplier"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="18sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/ocr_multiplier_value"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/ocr_consumption_value"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="1.00"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="18sp" />-->
+
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_below="@id/ocr_multiplier_value"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:background="@color/colorPrimary"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/ocr_meter_number"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/ocr_multiplier"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Meter number"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="18sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/ocr_meter_value"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/ocr_multiplier_value"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="261062251"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="18sp" />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_below="@id/ocr_meter_value"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:background="@color/colorPrimary"/>-->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Capture Image"
+            android:layout_above="@id/btnDetect"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:onClick="onClick"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"/>
+
+
+        <Button
+            android:id="@+id/btnDetect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Extract Details"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:onClick="onClick"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

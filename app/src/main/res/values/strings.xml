@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PDS Complaint System</string>
+    <string name="terms_string">By clicking "signup", I agree to Worla <u>terms and conditions</u> and <u>privacy policy</u>.</string>
+    <string name="google_maps_key">AIzaSyCO9ThnMIicXOUR23fXmrav2aNmVPlgN0A</string>
+    <string name="add_image"><u>Add Image</u></string>
+    <string name="about_app">No need to physically visit our offices anymore.\n\n
+        This app enables you to <b>access</b> and <b>request services</b>
+        directly from our offices.\nIt contains about <b>100 frequently asked questions.</b>\n\n
+        This app also helps you to calculate your electricity bill from your mobile device.
+        Whenever, wherever you need require our services, you are just a click away.\n\n\n
+        Welcome to the new world....</string>
+</resources>

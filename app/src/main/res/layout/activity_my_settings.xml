@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MySettings">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/setting_header"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:text="User Settings"
+            android:textSize="26sp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/items"
+        android:orientation="vertical"
+        android:layout_below="@id/setting_header"
+        android:layout_marginTop="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Me"
+                android:textSize="16sp"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="5dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="5dp">
+                <TextView
+                    android:id="@+id/about_me_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Name"
+                    android:paddingStart="15dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+                <TextView
+                    android:id="@+id/name_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kofi Electric"
+                    android:paddingStart="15dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|end"
+                    android:drawableEnd="@drawable/more"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="details_editing"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="3dp">
+                <TextView
+                    android:id="@+id/about_me_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Email"
+                    android:paddingStart="15dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/email_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawableEnd="@drawable/more"
+                    android:gravity="center_vertical|end"
+                    android:onClick="details_editing"
+                    android:paddingStart="15dp"
+                    android:text="abc@xyz.com"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="3dp">
+                <TextView
+                    android:id="@+id/hse_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="House Number"
+                    android:paddingStart="15dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+                <TextView
+                    android:id="@+id/hse_number_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OD 42"
+                    android:paddingStart="15dp"
+                    android:onClick="details_editing"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|end"
+                    android:drawableEnd="@drawable/more"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="3dp">
+
+                <TextView
+                    android:id="@+id/about_me_meter_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingStart="15dp"
+                    android:text="Meter number"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/meter_number_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="152482"
+                    android:paddingStart="15dp"
+                    android:onClick="details_editing"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|end"
+                    android:drawableEnd="@drawable/more"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="3dp">
+                <TextView
+                    android:id="@+id/about_me_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Telephone"
+                    android:paddingStart="15dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+                <TextView
+                    android:id="@+id/phone_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0541930357"
+                    android:paddingStart="15dp"
+                    android:onClick="details_editing"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|end"
+                    android:drawableEnd="@drawable/more"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/white_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:elevation="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Manage Account"
+                android:layout_marginStart="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:paddingStart="15dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="account_mgt"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Request Statement"
+                android:paddingStart="15dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="account_mgt"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share the app"
+                android:textSize="16sp"
+                android:paddingStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:onClick="account_mgt"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/signout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:paddingStart="15dp"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:onClick="account_mgt"
+                android:layout_marginBottom="15dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
